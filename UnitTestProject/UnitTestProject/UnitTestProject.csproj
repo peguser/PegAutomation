@@ -64,8 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnuShrutha\UnitTest1.cs" />
+    <Compile Include="Madhu\UnitTest1.cs" />
+    <Compile Include="Pavani\UnitTest1.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vinuta\UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -73,10 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
-    <Folder Include="AnuShrutha\" />
-    <Folder Include="Madhu\" />
-    <Folder Include="Pavani\" />
-    <Folder Include="Vinuta\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
