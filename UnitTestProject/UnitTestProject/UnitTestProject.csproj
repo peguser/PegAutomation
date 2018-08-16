@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnuShrutha\UnitTest1.cs" />
-    <Compile Include="Madhu\UnitTest1.cs" />
+    <Compile Include="Madhu\AmazonSearch.cs" />
     <Compile Include="Pavani\UnitTest1.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
