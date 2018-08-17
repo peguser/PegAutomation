@@ -5,11 +5,13 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support;
 using System.Threading;
 using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Interactions;
+using System;
 
 namespace UnitTestProject.Pavani
 {
     [TestClass]
-    public class PS_UnitTest1
+    public class PS_UnitTest1 : BaseClass
     {
         //private const string Url = "https//mylabs.px.ppe.pearsoncmg.com/Pegasus/frmlogin.aspx?s=3";
         IWebDriver wd;
@@ -18,6 +20,8 @@ namespace UnitTestProject.Pavani
         readonly string password = ConfigurationManager.AppSettings["password"];
 
         #region Login Page
+
+        IWebElement username3 => FindById("");
 
         /// <summary>
         /// this is username locator
@@ -37,7 +41,9 @@ namespace UnitTestProject.Pavani
 
         #endregion
 
-        [TestInitialize]
+        /// <summary>
+        /// Method to Launch Browser
+        /// </summary>
         public void InitBroswer()
         {
             wd = new ChromeDriver();
@@ -46,20 +52,19 @@ namespace UnitTestProject.Pavani
 
         }
 
-        [TestMethod]
-        [Priority(1)]
-        
-
-        public void Pgtitlechk()
+        /// <summary>
+        /// Method to Launch Browser
+        /// </summary>
+        public void Pgtitlechk(string expectedtitle)
         {
             string title = wd.Title;
             //string expectedtitle = "Pearson Sign In";
-            Assert.AreEqual(Resource1.Pagetitle, title);
+            Assert.AreEqual(expectedtitle, title);
         }
 
-        [TestMethod]
-        [Priority(2)]
-
+        /// <summary>
+        /// Method to Login to the app
+        /// </summary>
         public void SignIn()
         {
             IWebElement Uname = wd.FindElement(UserName);
@@ -73,20 +78,38 @@ namespace UnitTestProject.Pavani
 
             IWebElement button = wd.FindElement(Button);
             button.Click();
-            pagetoload();
         }
 
-
-         
-
-        public void pagetoload()
+        public void pagetoload(string pagetitle)
         {
             WebDriverWait wait = new WebDriverWait(wd, System.TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.TitleContains("Global Home"));
+            wait.Until(ExpectedConditions.TitleContains(pagetitle));
 
         }
-        [TestCleanup]
 
-        public void QuitBrowser() => wd.Quit();
+        [TestMethod]
+        public void TestMethod1()
+        {
+            try
+            {
+                InitBroswer();
+
+                Pgtitlechk("Pearson Sign In");
+
+                SignIn();
+
+                pagetoload("Global Home");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            finally
+            {
+                wd.Quit();
+            }
+        }
+
+
     }
 }

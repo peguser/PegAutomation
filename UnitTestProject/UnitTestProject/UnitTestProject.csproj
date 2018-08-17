@@ -67,12 +67,15 @@
   <ItemGroup>
     <Compile Include="AnuShrutha\UnitTest1.cs" />
     <Compile Include="Madhu\UnitTest1.cs" />
+    <Compile Include="Pavani\BaseClass.cs" />
+    <Compile Include="Pavani\LoginPage.cs" />
     <Compile Include="Pavani\Resource1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Compile Include="Pavani\UnitTest1.cs" />
+    <Compile Include="Pavani\UnitTest2.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vinuta\UnitTest1.cs" />
@@ -80,6 +83,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Pavani\OrderedTest.LoginScenarios.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />

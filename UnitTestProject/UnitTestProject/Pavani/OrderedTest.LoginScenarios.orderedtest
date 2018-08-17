@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.LoginScenarios" storage="c:\users\pavani.shankar\documents\pegautomation\unittestproject\unittestproject\pavani\orderedtest.loginscenarios.orderedtest" id="2dec7525-cb72-42b8-8b18-115fbefe3243" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="98989e84-cb6c-4f54-d2f9-10a6686f55c1" name="CheckValidLogin" storage="..\bin\debug\unittestproject.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="ba24d74b-26f0-91fe-382c-a5156aaf04ae" name="CheckInValidLogin" storage="..\bin\debug\unittestproject.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="53047352-de72-67dd-d9e3-54c30252e39f" name="LogOut" storage="..\bin\debug\unittestproject.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
